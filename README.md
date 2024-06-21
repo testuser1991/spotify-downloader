@@ -133,7 +133,7 @@ For a list of all **options** use ```spotdl -h```
 
 ## Service file
 If you are using linux and wish to run a webui with .service file then the file should look like this 
-[Unit]
+```[Unit]
 Description=spotdl Web Interface
 After=network.target
 
@@ -145,7 +145,7 @@ RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
-
+```
 
 ## Music Sourcing and Audio Quality
 
