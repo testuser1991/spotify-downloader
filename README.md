@@ -131,6 +131,22 @@ For a list of all **options** use ```spotdl -h```
 - `meta`: Updates metadata for the provided song files.
 </details>
 
+## Service file
+If you are using linux and wish to run a webui with .service file then the file should look like this 
+[Unit]
+Description=spotdl Web Interface
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'cd /path/to/folder/ && /usr/local/bin/spotdl web --web-use-output-dir --host 0.0.0.0'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
+
 ## Music Sourcing and Audio Quality
 
 spotDL uses YouTube as a source for music downloads. This method is used to avoid any issues related to downloading music from Spotify.
